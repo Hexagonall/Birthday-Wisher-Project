@@ -20,7 +20,7 @@ birthdays_dict = {(data_row["month"],data_row["day"]):data_row for (index,data_r
 if today_tuple in birthdays_dict:
     birthday_person = birthdays_dict
 
-    with open(f"letter_templates/letter_{random.randint(1,3)}.txt") as letter_file:
+    with open(f"letter_{random.randint(1,3)}.txt") as letter_file:
         data = letter_file.read()
         data.replace("[NAME]",birthday_person["name"])
 
